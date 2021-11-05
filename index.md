@@ -4,7 +4,7 @@
 
 Welcome to my page! 
 
-I'm a technologist, science communicator & content creator with research interests in Human-Computer Interaction and Social/Collaborative Computing. 
+I'm a technologist, science communicator & content creator with research interests in Human-Computer Interaction, Social/Collaborative Computing and Citizen Science. 
 
 
 
