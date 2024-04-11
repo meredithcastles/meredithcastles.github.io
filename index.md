@@ -1,42 +1,223 @@
 
-
-**Hello!**
-
-Welcome to my page! 
-
-I'm a technologist, science communicator & content creator with research interests in Human-Computer Interaction, Social/Collaborative Computing and Citizen Science. 
-
-
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/meredithcastles/meredithcastles.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<title>Home</title>
+<meta name="referrer" content="same-origin">
+<meta name="viewport" content="width=960">
+<style>body{-webkit-text-size-adjust:none}@font-face{font-family:"Muli";src:url('css/Muli-Regular.woff2') format('woff2'),url('css/Muli-Regular.woff') format('woff');font-weight:400}body>div{font-size:0}p, span,h1,h2,h3,h4,h5,h6{margin:0;word-spacing:normal;word-wrap:break-word;-ms-word-wrap:break-word;pointer-events:auto}sup{font-size:inherit;vertical-align:baseline;position:relative;top:-0.4em}sub{font-size:inherit;vertical-align:baseline;position:relative;top:0.4em}ul{display:block;word-spacing:normal;word-wrap:break-word;list-style-type:none;padding:0;margin:0;-moz-padding-start:0;-khtml-padding-start:0;-webkit-padding-start:0;-o-padding-start:0;-padding-start:0;-webkit-margin-before:0;-webkit-margin-after:0}li{display:block}li p{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none}form{display:inline-block}a{text-decoration:inherit;color:inherit;-webkit-tap-highlight-color:rgba(0,0,0,0)}textarea{resize:none}.shm-l{float:left;clear:left}.shm-r{float:right;clear:right}.whitespacefix{word-spacing:-1px}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{font-size:0;margin:0}audio,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:0 0;outline:0}b,strong{font-weight:700}dfn{font-style:italic}h1,h2,h3,h4,h5,h6{font-size:1em;line-height:1;margin:0 0}img{border:0}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=submit]{-webkit-appearance:button;cursor:pointer;box-sizing:border-box;white-space:normal}input[type=password],input[type=text],textarea{-webkit-appearance:none;appearance:none;box-sizing:border-box}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal;border-radius:0}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}textarea{overflow:auto;box-sizing:border-box;border-color:#ddd}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}:-webkit-full-screen-ancestor:not(iframe){-webkit-clip-path:initial!important}
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }.menu-content{cursor:pointer;position:relative}li{-webkit-tap-highlight-color:rgba(0,0,0,0)}
+#b{background-color:#d6d6d6}.ps6{position:relative;margin-top:0}.v3{display:block;*display:block;zoom:1;vertical-align:top}.s5{pointer-events:none;min-width:960px;width:960px;margin-left:auto;margin-right:auto}.v4{display:inline-block;*display:inline;zoom:1;vertical-align:top}.ps7{position:relative;margin-left:0;margin-top:0}.s6{min-width:960px;width:960px;min-height:1945px}.w{line-height:0}.s7{min-width:960px;width:960px;min-height:3400px}.c8{z-index:1;border:0;background-color:#fefefe}.s8{min-width:960px;width:960px;min-height:90px}.c9{z-index:2;border:0;background-color:#212020}.ps8{position:relative;margin-left:70px;margin-top:37px}.s9{min-width:880px;width:880px;min-height:39px}.v5{display:inline-block;*display:inline;zoom:1;vertical-align:top;overflow:hidden}.s10{min-width:268px;width:268px;min-height:30px;height:30px}.c10{z-index:4;pointer-events:auto}.p2{padding-top:0;text-indent:0;padding-bottom:0;padding-right:0;text-align:left}.f2{font-family:Muli;font-size:24px;font-weight:400;font-style:normal;text-decoration:none;text-transform:none;color:#929000;background-color:initial;line-height:30px;letter-spacing:normal;text-shadow:none}.ps9{position:relative;margin-left:277px;margin-top:14px}.s11{min-width:335px;width:335px;min-height:25px;height:25px}.c11{z-index:7;pointer-events:auto}.p3{padding-top:0;padding-bottom:0;text-align:right;text-indent:0;padding-right:0}.f3{font-family:Muli;font-size:13px;font-weight:400;font-style:normal;text-decoration:none;text-transform:none;color:#fff;background-color:initial;line-height:17px;letter-spacing:normal;text-shadow:none}.v6{display:inline-block;*display:inline;zoom:1;vertical-align:top;overflow:visible}.ps10{position:relative;margin-left:130px;margin-top:20px}.s12{min-width:700px;width:700px;min-height:33px;height:33px}.c12{z-index:10;pointer-events:auto}.v7{display:inline-block;*display:inline-block;zoom:1;vertical-align:top}.m{padding:0px 0px 0px 0px}.ml{outline:0}.s13{min-width:100px;width:100px;min-height:33px;height:33px}.mcv{display:inline-block}.s14{min-width:100px;width:100px;min-height:33px}.c13{pointer-events:none;border:0;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;background-color:rgba(192,192,192,.75);behavior:url(js/PIE.htc);-pie-background:rgba(192,192,192,0.750898);behavior:url(js/PIE.htc);-pie-background:rgba(192,192,192,0.750898)}.ps11{position:relative;margin-left:0;margin-top:7px}.s15{min-width:100px;width:100px;min-height:19px;height:19px}.c14{pointer-events:auto}.p4{padding-top:0;text-indent:0;padding-bottom:0;padding-right:0;text-align:center}.f4{font-family:Muli;font-size:14px;font-weight:400;font-style:normal;text-decoration:none;text-transform:none;color:#000;background-color:initial;line-height:17px;letter-spacing:normal;text-shadow:none}.ps12{position:relative;margin-left:80px;margin-top:11px}.s16{min-width:810px;width:810px;min-height:1676px}.s17{min-width:310px;width:310px;min-height:961px}.s18{min-width:300px;width:300px;min-height:434px;height:434px}.c15{z-index:8;pointer-events:auto}.i3{position:absolute;left:0;width:300px;height:406px;top:14px;border:0}.i4{left:0;width:300px;height:406px;top:14px;display:inline-block;-webkit-transform:translate3d(0,0,0)}.ps13{position:relative;margin-left:0;margin-top:21px}.s19{min-width:310px;width:310px;min-height:506px;height:506px}.c16{z-index:6;pointer-events:auto}.f5{font-family:Muli;font-size:15px;font-weight:400;font-style:normal;text-decoration:none;text-transform:none;color:#929292;background-color:initial;line-height:22px;letter-spacing:normal;text-shadow:none}.f6{font-family:Muli;font-size:15px;font-weight:400;font-style:normal;text-decoration:none;text-transform:none;color:#584d4d;background-color:initial;line-height:22px;letter-spacing:normal;text-shadow:none}.ps14{position:relative;margin-left:20px;margin-top:22px}.s20{min-width:480px;width:480px;min-height:1654px}.s21{min-width:230px;width:230px;min-height:30px;height:30px}.c17{z-index:3;pointer-events:auto}.f7{font-family:Muli;font-size:20px;font-weight:400;font-style:normal;text-decoration:none;text-transform:none;color:#000;background-color:initial;line-height:30px;letter-spacing:normal;text-shadow:none}.ps15{position:relative;margin-left:0;margin-top:13px}.s22{min-width:480px;width:480px;min-height:3200px;height:3200px}.c18{z-index:5;pointer-events:auto}.f8{font-family:Muli;font-size:18px;font-weight:400;font-style:normal;text-decoration:none;text-transform:none;color:#929000;background-color:initial;line-height:27px;letter-spacing:normal;text-shadow:none}.ps16{margin-left:12px}.p5{padding-top:0;padding-bottom:0;text-align:left;text-indent:-11px;padding-right:0}.menu-device{background-color:rgb(0,0,0);display:none}</style>
+<link as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload" href="css/site.20200506103024.css">
+<noscript><link rel="stylesheet" href="css/site.20200506103024.css"></noscript>
+<!--[if lte IE 7]>
+<link rel="stylesheet" href="css/site.20200506103024-lteIE7.css" type="text/css">
+<![endif]-->
+<!--[if lte IE 8]>
+<link rel="stylesheet" href="css/site.20200506103024-lteIE8.css" type="text/css">
+<![endif]-->
+<!--[if gte IE 9]>
+<link rel="stylesheet" href="css/site.20200506103024-gteIE9.css" type="text/css">
+<![endif]-->
+<script>!function(t){var e=!1;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){}if(!e)for(var n=t.document.getElementsByTagName("link"),a=0;a<n.length;a++){var o=n[a];"preload"===o.rel&&"style"===o.getAttribute("as")&&function(t){function e(){if(!t.getAttribute("data-l")){t.setAttribute("data-l",!0),t.addEventListener?t.removeEventListener("load",e):t.attachEvent&&t.detachEvent("onload",e),t.setAttribute("onload",null),t.media="all";var n=window.location.hash;n.length>1&&setTimeout(function(){var t=document.querySelectorAll('[name="'+n.slice(1)+'"]')[0],e=0;if(t.offsetParent)do{e+=t.offsetTop}while(t=t.offsetParent);window.scrollTo(0,e)},100)}}t.addEventListener?t.addEventListener("load",e):t.attachEvent&&t.attachEvent("onload",e),setTimeout(function(){t.rel="stylesheet",t.media="nl x"}),setTimeout(e,3e3)}(o)}}(this);
+</script>
+</head>
+<body id="b">
+<div class="ps6 v3 s5">
+<div class="v4 ps7 s6 c7">
+<div class="v4 ps7 s6 w">
+<div class="v4 ps7 s7 c8">
+<div class="v4 ps7 s8 c9">
+<div class="v4 ps8 s9 c7">
+<div class="v5 ps7 s10 c10">
+<p class="p2 f2">Dr Meredith Castles</p>
+</div>
+<div class="v5 ps9 s11 c11">
+<p class="p3 f3">“An interface is like a joke. If you have to explain it, it's not very good.” <span class="f3">—</span> Unknown</p>
+</div>
+</div>
+</div>
+<div class="v6 ps10 s12 c12">
+<ul class="menu-dropdown v7 ps7 s12 m" id="m1">
+<li class="v4 ps7 s13 mit">
+<a href="#" class="ml"><div class="menu-content mcv"><div class="v4 ps7 s14 c13"><div class="v5 ps11 s15 c14"><p class="p4 f4">Home</p></div></div></div></a>
+</li>
+<li class="v4 ps7 s13 mit">
+<a href="cv.html" class="ml"><div class="menu-content mcv"><div class="v4 ps7 s14 c13"><div class="v5 ps11 s15 c14"><p class="p4 f4">CV</p></div></div></div></a>
+</li>
+<li class="v4 ps7 s13 mit">
+<a href="teaching.html" class="ml"><div class="menu-content mcv"><div class="v4 ps7 s14 c13"><div class="v5 ps11 s15 c14"><p class="p4 f4">Teaching</p></div></div></div></a>
+</li>
+<li class="v4 ps7 s13 mit">
+<a href="publications.html" class="ml"><div class="menu-content mcv"><div class="v4 ps7 s14 c13"><div class="v5 ps11 s15 c14"><p class="p4 f4">Publications</p></div></div></div></a>
+</li>
+<li class="v4 ps7 s13 mit">
+<a href="grants.html" class="ml"><div class="menu-content mcv"><div class="v4 ps7 s14 c13"><div class="v5 ps11 s15 c14"><p class="p4 f4">Grants</p></div></div></div></a>
+</li>
+<li class="v4 ps7 s13 mit">
+<a href="talks.html" class="ml"><div class="menu-content mcv"><div class="v4 ps7 s14 c13"><div class="v5 ps11 s15 c14"><p class="p4 f4">Talks</p></div></div></div></a>
+</li>
+<li class="v4 ps7 s13 mit">
+<a href="phd-projects.html" class="ml"><div class="menu-content mcv"><div class="v4 ps7 s14 c13"><div class="v5 ps11 s15 c14"><p class="p4 f4">PhD Projects</p></div></div></div></a>
+</li>
+</ul>
+</div>
+<div class="v4 ps12 s16 c7">
+<div class="v4 ps7 s17 w">
+<div class="v4 ps7 s18 c15">
+<picture class="i4">
+<source srcset="images/shapeimage_1-300-7.png 1x">
+<img src="images/shapeimage_1-300-7.png" alt="" class="js i3">
+</picture>
+</div>
+<!--
+<div class="v5 ps13 s19 c16">
+<p class="p2 f5">Dr Sophie Calabretto</p>
+<p class="p2 f5">Senior Lecturer in Applied Mathematics</p>
+<p class="p2 f6">Department of Mathematics and Statistics</p>
+<p class="p2 f6">Macquarie University</p>
+<p class="p2 f5"><br></p>
+<p class="p2 f5">Honorary Associate Professor,</p>
+<p class="p2 f5">ACE Research Group</p>
+<p class="p2 f6">School of Engineering</p>
+<p class="p2 f6">University of Leicester</p>
+<p class="p2 f6"><br></p>
+<p class="p2 f6">Room 6.25, 12 Wally’s Walk</p>
+<p class="p2 f6">Macquarie University NSW 2109</p>
+<p class="p2 f6">Australia</p>
+<p class="p2 f6"><br></p>
+<p class="p2 f6">contact info:</p>
+<p class="p2 f6">+61 2 9850 8950</p>
+<p class="p2 f6">sophie.calabretto{at}mq.edu.au</p>
+<p class="p2 f5">Honorary Senior Lecturer</p>
+<p class="p2 f6">School of Mathematical and Physical Sciences</p>
+<p class="p2 f6">Macquarie University</p>
+<p class="p2 f5"><br></p>
+</div>
+-->
+<div class="v5 ps13 s19 c16">
+<p class="p2 f5">Dr Sophie Calabretto</p>
+<p class="p2 f5">Honorary Associate Professor,</p>
+<!--<p class="p2 f5">Aerospace & Computational Engineering (ACE) Research Group</p>-->
+<p class="p2 f6">School of Engineering</p>
+<p class="p2 f6">University of Leicester</p>
+<p class="p2 f6"><br></p>
+<p class="p2 f5">Industry Fellow</p>
+<p class="p2 f6">School of Mathematical and Physical Sciences</p>
+<p class="p2 f6">University of Technology Sydney</p>
+<p class="p2 f6"><br></p>
+<!--<p class="p2 f6">contact info:</p>
+<p class="p2 f6">sophie.calabretto{at}protonmail.ch</p>-->
+</div>
+</div>
+<div class="v4 ps14 s20 w">
+<div class="v5 ps7 s21 c17">
+<p class="p2 f7">Welcome.</p>
+</div>
+<div class="v5 ps15 s22 c18">
+<p class="p2 f5">I am an applied mathematician, fluid mechanist, and science writer.<br>
+My research interests include the unsteady flow of rotating fluids, specifically focusing on the dynamics resulting from impulsive changes in rotation rate, including the formation of boundary layers, their subsequent evolution, and the formation of instabilities. I am also interested in transitional turbulence, and rotational coherence in three-dimensional turbulent flows.<br>
+<!--I am also the host of <span class="f6"><a href="https://www.listnr.com/podcasts/the-science-briefing" target="_blank" rel="noopener">The Science Briefing</a></span>, a podcast about the science of everything, produced by LiSTNR and The Royal Institution of Australia.</p>-->
+<p class="p2 f5"><br></p>
+<p class="p2 f5">Link to the <span class="f6"><a href="ecw2020.html" target="_blank" rel="noopener">AustMS Early-Career Workshop 2020</a></span>.</p>
+<p class="p2 f5"><br></p>
+<p class="p2 f8">Recent media and news.</p>
+<ul class="ps16">
+<li class="p5 f5">• Why drive when you could fly?, Cosmos Magazine (Issue 96 September-November 2022), October 2022</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://www.facebook.com/ABCScience/videos/1107697686519316" target="_blank" rel="noopener">Can ocean whirlpools swallow whole ships? | Weird: Oceans (video), ABC Science, September 2022</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://australian.museum/learn/teachers/video-conferencing/meet-the-experts-eureka-stories/" target="_blank" rel="noopener">Meet the experts – Eureka Stories (MC), Australian Museum, September 2022</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://www.atse.org.au/wp-content/uploads/2022/08/ATSE-IMPACT-213-web-version-220808.pdf" target="_blank" rel="noopener">Fluid futures, STEM careers (pp 42-43), IMPACT #213 Winter 2022: A tech powered, human driven future, Australian Academy of Technology and Engineering (ATSE), August 2022</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://cosmosmagazine.com/science/the-next-big-things-in-science/" target="_blank" rel="noopener">Seven next big things in science which will change our world (MC), Cosmos Magazine, August 2022</a></span></li>
+<li class="p5 f5">• Sticky Business, Cosmos Magazine (Issue 94 March-May 2022), March 2022</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://thatsscience.org/2021/10/24/episode-132-physically-looking-inside-of-you/" target="_blank" rel="noopener">
+    Episode 132. Physically looking inside (of you), That's What I Call Science, October 2021</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://cosmosmagazine.com/science/mathematics/calhoun-rodent-experiments/" target="_blank" rel="noopener">Calhoun’s prophet rodents and the creation of the "behavioural sink", Cosmos Weekly 27, Cosmos Magazine, October 2021</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://thatsscience.org/2021/09/26/episode-128-the-problems-with-maths/" target="_blank" rel="noopener">Episode 128. The Problems with Maths, That's What I Call Science, September 2021</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://cosmosmagazine.com/science/mathematics/a-mathematician-watches-the-number-23/" target="_blank" rel="noopener">A mathematician watches The Number 23, Cosmos Weekly 22, Cosmos Magazine, September 2021</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://cosmosmagazine.com/science/physics/how-do-stingrays-swim-so-well/" target="_blank" rel="noopener">How stingrays became such sleek swimmers, Cosmos Magazine, September 2021</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://www.nysf.edu.au/top-10-nysf-connect-webinars/" target="_blank" rel="noopener">Top 10 NYSF Connect Webinars of 2020 - National Science Week 2021, National Youth Science Forum, August 2021</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://cosmosmagazine.com/science/mathematics/babylonian-tablet-trigonometry-pythagorean-triplets/" target="_blank" rel="noopener">A new angle on ancient trigonometry, Cosmos Weekly 16, Cosmos Magazine, August 2021</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://thatsscience.org/2021/07/25/episode-119-biostatistics-its-good-for-the-heart/" target="_blank" rel="noopener">Episode 119. Biostatistics: it’s good for the heart, That's What I Call Science, July 2021</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://www.csiro.au/en/education/programs/generation-stem/masterclassseries" target="_blank" rel="noopener">Generation STEM Masterclass series – The fascinating world of supercomputers, CSIRO, June 2021</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://thatsscience.org/2021/05/30/episode-111-ecological-decision-science/" target="_blank" rel="noopener">Episode 111. Ecological decision science, That's What I Call Science, June 2021</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://youtu.be/4-tF4kOj8CM" target="_blank" rel="noopener">Highlighting the M in STEM, Pint of Science 2021, May 2021</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://thatsscience.org/2021/04/04/episode-103-ice-ice-maybe/" target="_blank" rel="noopener">Episode 103. Ice, ice, maybe?, That's What I Call Science, April 2021</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://thatsscience.org/2021/02/07/episode-95-fluids-behaving-badly-the-maths-of-fluid-flow/" target="_blank" rel="noopener">Episode 95. Fluids behaving badly: the maths of fluid flow, That's What I Call Science, February 2021</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://acems.org.au/podcast/episode-44-overcoming-imposter-syndrome" target="_blank" rel="noopener">Episode 44: Overcoming Imposter Syndrome, The Random Sample - an ACEMS Podcast Series, December 2020</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://acems.org.au/podcast/episode-43-maths-perseverance" target="_blank" rel="noopener">Episode 43: Maths & the Power of Perseverance, The Random Sample - an ACEMS Podcast Series, December 2020</a></span></li>
+<li class="p5 f5">• Turbulent Times, Cosmos Magazine (Issue 89 December-February 2020), December 2020</a></span></li>
+<li class="p5 f5">• <span class="f5">Cassie McCullagh speaks to 2020 Eureka Prizes finalists (</span><span class="f5"><a href="https://www.facebook.com/abcinsydney/videos/2800007940288128/" target="_blank" rel="noopener">Facebook Live video</a></span><span class="f5">)/(</span><span class="f5"><a href="https://www.abc.net.au/radio/sydney/programs/focus/focus/12889744" target="_blank" rel="noopener">ABC RN Focus episode</a></span><span class="f5">), Focus, ABC RN, November 2020</span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://youtu.be/eDJNGyk119M" target="_blank" rel="noopener">Introducing the Australasian Chapter of Women in HPC, National Computational Infrastructure (NCI), October 2020</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://lighthouse.mq.edu.au/article/september-2020/Divide-and-conquer-why-doing-maths-adds-up-to-life-success" target="_blank" rel="noopener">Divide and conquer: why doing maths adds up to life success, The Lighthouse, Macquarie University, September 2020</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://www.1mwis.com/profiles/Sophie-Calabretto" target="_blank" rel="noopener">Sophie Calabretto, 1 Million Women In STEM (1MWIS), September 2020</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://www.projectgenz.com.au/online-store/Science-is-my-Superpower-STEM-digital-program-for-Age-12-18-p206041107" target="_blank" rel="noopener">Science is my Superpower, Project Gen Z, August 2020</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://www.nysf.edu.au/closednysf-week-of-webinars-national-science-week-2020" target="_blank" rel="noopener">NYSF Week of Webinars - National Science Week 2020, National Youth Science Forum, August 2020</a></span></li>
+<li class="p5 f5">• Galaxies under glass, Cosmos Magazine (Issue 87 June-August 2020), June 2020</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://nci.org.au/research/people/dr-sophie-calabretto" target="_blank" rel="noopener">Dr Sophie Calabretto - Humans of NCI, National Computational Infrastructure (NCI), May 2020</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://sites.google.com/view/pierre-portal/australian-women-of-mathematics" target="_blank" rel="noopener">Australian Women of Mathematics exhibit: first look, May 2020</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://www.adelaidenow.com.au/news/south-australia/abbi-and-amber-equalling-the-score-for-women-to-mark-125-years-of-womens-vote-in-sa/news-story/f37452de94ade4a1946ac0077a35e5c5" target="_blank" rel="noopener">Nominees for Woman of the Year award announced, The Sunday Mail, December 2019</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://www.facebook.com/ABCScience/videos/2754125078006092/" target="_blank" rel="noopener">What’s the opposite of infinity? | Elevator Pitch (video), ABC Science, November 2019</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://australiascience.tv/ultimate-careers-magazine-2019/" target="_blank" rel="noopener">Ultimate Careers magazine 2019 (pp 38-39), Australia&apos;s Science Channel, November 2019</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://www.adelaidenow.com.au/messenger/city/sas-most-powerful-women-in-science-medicine-innovation-and-space/news-story/f4b4329f0bb4e88418a34305f9190883" target="_blank" rel="noopener">SA&apos;s most powerful women in science, medicine, innovation and space</a></span><span class="f5"><a href="http://" target="_blank" rel="noopener">, The Messenger, October 2019</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://careerswithstem.com.au/3-reasons-you-dont-have-to-be-a-genius-to-be-good-at-maths/" target="_blank" rel="noopener">3 reasons you don’t have to be a ‘genius’ to be good at maths, Careers with STEM, August 2019</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://www.abc.net.au/radionational/programs/scienceshow/for-the-perfect-martini,-thank-fluid-mechanics/11326556" target="_blank" rel="noopener">For the perfect martini, thank fluid mechanics, ABC RN Science Show, July 2019</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://acems.org.au/Women-in-Maths-Spotlight" target="_blank" rel="noopener">Spotlight on Women in Maths in Australia, ARC Centre of Excellence for Mathematical & Statistical Frontiers (ACEMS), May 2019</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://www.abc.net.au/radionational/programs/scienceshow/university-of-sydney-opens-new-mathematics-research-institute/10505392" target="_blank" rel="noopener">University of Sydney opens new mathematics research institute, ABC RN Science Show, November 2018</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="http://www.abc.net.au/catalyst/stories/4891962.htm" target="_blank" rel="noopener">How To Be Lucky: The Maths Of Chance, Catalyst (ABC TV), September 2018</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="http://www.abc.net.au/radionational/programs/ockhamsrazor/the-mathematics-of-murderers-sophie-calabretto/10328640" target="_blank" rel="noopener">Ockham’s Razor, ABC RN (live podcast recording for Sydney Science Festival 2018), August 2018</a></span></li>
+<li class="p5 f5">• <span class="f5">Ep 56. Life vs Science, In Situ Science (</span><span class="f5"><a href="https://insituscience.com/2018/08/20/ep-56-life-vs-science-2018/" target="_blank" rel="noopener">live podcast recording</a></span><span class="f5"> for Sydney Science Festival 2018), August 2018 (</span><span class="f5"><a href="https://youtu.be/z3u2JwGuZwo" target="_blank" rel="noopener">video highlights</a></span><span class="f5">)</span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://issuu.com/refractionmedia/docs/cwmaths18_issuu_2" target="_blank" rel="noopener">Finding the right fit, Careers with Maths 2018 (pg 13), Refraction Media, May 2018</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://www.facebook.com/AustralianAcademyofScience/videos/1659561194121405/" target="_blank" rel="noopener">Science in the Australian Federal Budget 2018 (video), Australian Academy of Science, May 2018</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://lighthouse.mq.edu.au/article/future-jobs-will-need-higher-maths,-says-young-stem-star2" target="_blank" rel="noopener">Future jobs will need higher maths, says young STEM star, The Lighthouse, Macquarie University, April 2018</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://www.nysf.edu.au/3001-2/" target="_blank" rel="noopener">Alumna Sophie Calabretto talks about a career that adds up, National Youth Science Forum, March 2018</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://ilglobo.com/en/news/making-maths-exciting-with-sophie-calabretto-37498/#" target="_blank" rel="noopener">Making maths exciting with Sophie Calabretto, Il Globo, February 2018</a></span><span class="f5"> (Italian translation in print edition on 5 February 2018)</span></li>
+<li class="p5 f5">• <span class="f5">Facebook Live Q&amp;A (with Lily Serna) for Catalyst (ABC TV), January 2018</span></li>
+<li class="p5 f5">• <span class="f5"><a href="http://www.abc.net.au/catalyst/stories/4792087.htm" target="_blank" rel="noopener">The Secret To Making Better Decisions, Catalyst (ABC TV), January 2018</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://nci.org.au/research/research-highlights/designing-better-planes-supercomputing" target="_blank" rel="noopener">Designing better planes with supercomputing, National Computational Infrastructure (NCI), December 2017</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://www.facebook.com/AustralianAcademyofScience/videos/1505125146231678/" target="_blank" rel="noopener">Australia’s supercomputer (video), Australian Academy of Science (for the National Computational Infrastructure), November 2017</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="http://www.news.com.au/features/v3/nlmd-1929/six-truly-extraordinary-young-australians/" target="_blank" rel="noopener">Six Australian STEM leaders, news.com.au, November 2017</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://cosmosmagazine.com/mathematics/friday-profile-spinning-towards-a-solution" target="_blank" rel="noopener">Friday profile: Spinning towards a solution, Cosmos Magazine, September 2017</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="http://www.abc.net.au/radionational/programs/scienceshow/mathematics-improves-weather-forecasting/8820846" target="_blank" rel="noopener">Mathematics improves weather forecasting, ABC RN Science Show, August 2017</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://www.facebook.com/radionational/videos/10155606483582378/" target="_blank" rel="noopener">Can you solve these equations? It could earn you a million dollars (video), ABC RN, August 2017</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="http://www.abc.net.au/news/science/2017-08-15/whats-behind-the-weather/8786838" target="_blank" rel="noopener">Weather systems are chaotic and can be completely unpredictable. But what&apos;s behind them?, ABC Science, August 2017</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="http://www.abc.net.au/radionational/programs/scienceshow/the-appeal-of-maths/8731280" target="_blank" rel="noopener">The appeal of maths, ABC RN Science Show, July 2017</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://youtu.be/wcp0rybCqhU" target="_blank" rel="noopener">Discover your future as a female student in Science, Technology, Engineering and Maths (video), Macquarie University, July 2017</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="http://www.abc.net.au/radionational/programs/drive/research-filter-fluid-mechanics,-ant-towers-and-gonorrhea/8706118" target="_blank" rel="noopener">Research Filter: fluid mechanics, ant towers and gonorrhea, ABC RN Drive with Patricia Karvelas, July 2017</a></span></li>
+<li class="p5 f5">• <span class="f5">ABC Townsville Mornings (with Dr Karl), July 2017</span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://www.mq.edu.au/newsroom/2017/06/08/numbers-in-action-macquaries-next-gen-science-communicator/" target="_blank" rel="noopener">Numbers in action – Macquarie's next gen science communicator, Macquarie University, June 2017</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="http://www.abc.net.au/news/science/2017-06-08/meet-five-young-australian-scientists-top-5-under-40/8597694" target="_blank" rel="noopener">Meet five young Australian scientists who want to change the world, ABC Science, June 2017</a></span></li>
+<li class="p5 f5">• <span class="f5"><a href="https://youtu.be/6OQB0V_JXsk" target="_blank" rel="noopener">Kick-start your career in science at Macquarie (video), Macquarie University, March 2017</a></span></li>
+</ul>
+<p class="p2 f5"><br></p>
+</div>
+</div>
+</div>
+</div>
+<div class="v ps s c">
+<div class="v ps2 s2 c2">
+<div class="v2 ps3 s3 c3">
+<p class="p f">© 2024 Sophie Calabretto</p>
+</div>
+<div class="v ps4 s4 c4">
+<a href="https://www.instagram.com/sophluidynamics/" target="_blank" rel="noopener" class="a"><picture class="i2"><source srcset="images/ig_glyph_fill-46-1.png 1x"><img src="images/ig_glyph_fill-46-1.png" alt="" class="js2 i"></picture></a>
+</div>
+<div class="v ps5 s4 c5">
+<a href="https://twitter.com/sophluidynamics" target="_blank" rel="noopener" class="a"><picture class="i2"><source srcset="images/twitter_logo_blue-46-1.png 1x"><img src="images/twitter_logo_blue-46-1.png" alt="" class="js3 i"></picture></a>
+</div>
+<div class="v ps5 s4 c6">
+<a href="https://www.researchgate.net/profile/Sophie_Calabretto" target="_blank" rel="noopener" class="a"><picture class="i2"><source srcset="images/rg_square_green-46-1.png 1x"><img src="images/rg_square_green-46-1.png" alt="" class="js4 i"></picture></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>!function(){var s=["js/jquery.js","js/jqueryui.js","js/menu.js","js/menu-dropdown-animations.min.js","js/menu-dropdown.20200506103024.js","js/index.20200506103024.js"],n={},j=0,e=function(e){var o=new XMLHttpRequest;o.open("GET",s[e],!0),o.onload=function(){if(n[e]=o.responseText,6==++j)for(var t in s){var i=document.createElement("script");i.textContent=n[t],document.body.appendChild(i)}},o.send()};for(var o in s)e(o)}();
+</script>
+<script type="text/javascript">
+var ver=RegExp(/Mozilla\/5\.0 \(Linux; .; Android ([\d.]+)/).exec(navigator.userAgent);if(ver&&parseFloat(ver[1])<5){document.getElementsByTagName('body')[0].className+=' whitespacefix';}
+</script>
+</body>
+</html>
 
