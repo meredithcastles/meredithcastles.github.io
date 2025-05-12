@@ -124,14 +124,6 @@
       if (li) li.remove();
     });
 
-     li.onclick = () => {
-    const newDoneState = !li.classList.contains('done');
-    listRef.child(key).update({ done: newDoneState });
-  };
-
-  list.appendChild(li);
-});
-
     // Add new task
 input.addEventListener('keydown', (e) => {
   if (e.key === 'Enter') {
