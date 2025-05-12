@@ -125,12 +125,25 @@
     });
 
     // Add new task
-    input.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' && input.value.trim()) {
-        listRef.push({ text: input.value.trim(), done: false });
+input.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    const text = input.value.trim();
+    if (text.length === 0) return;
+
+    console.log("Adding task:", text); // ✅ Debug log
+
+    listRef.push({ text, done: false })
+      .then(() => {
         input.value = '';
-      }
-    });
+        console.log("Task added successfully");
+      })
+      .catch((error) => {
+        console.error("Failed to add task:", error);
+        alert("Could not add task. Check console for errors.");
+      });
+  }
+});
+
   </script>
 </body>
 </html>
