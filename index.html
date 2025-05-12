@@ -108,25 +108,21 @@
     }
 
     // Listen for changes
-listRef.on('child_added', (data) => {
-  const task = data.val();
-  const key = data.key;
+ listRef.on('child_added', (data) => {
+      renderTask(data.key, data.val());
+    });
 
-  const li = document.createElement('li');
-  const span = document.createElement('span');
-  span.textContent = task.text;
-  li.appendChild(span);
+    listRef.on('child_changed', (data) => {
+      const li = document.getElementById(data.key);
+      if (li) {
+        li.classList.toggle('done', data.val().done);
+      }
+    });
 
-  if (task.done) li.classList.add('done');
-
-  // ✅ Toggle done/undone on click
-  li.onclick = () => {
-    const newDoneState = !li.classList.contains('done');
-    listRef.child(key).update({ done: newDoneState });
-  };
-
-  list.appendChild(li);
-});
+    listRef.on('child_removed', (data) => {
+      const li = document.getElementById(data.key);
+      if (li) li.remove();
+    });
 
     // Add new task
 input.addEventListener('keydown', (e) => {
