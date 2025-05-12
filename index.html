@@ -59,6 +59,8 @@
   <input type="text" id="new-task" placeholder="Add new task and press Enter...">
 
   <script>
+    import { initializeApp } from "firebase/app";
+    import { getAnalytics } from "firebase/analytics";
     // 🔧 Replace this with your actual config from Firebase Console
     const firebaseConfig = {
       apiKey: "AIzaSyCyfR3z0JM8LfZHNkMjKom6FbStKIItBqk",
@@ -75,6 +77,8 @@
     firebase.initializeApp(firebaseConfig);
     const db = firebase.database();
     const listRef = db.ref("tasks");
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
 
     const list = document.getElementById('todo-list');
     const input = document.getElementById('new-task');
