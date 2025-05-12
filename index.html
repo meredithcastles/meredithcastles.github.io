@@ -59,8 +59,7 @@
   <input type="text" id="new-task" placeholder="Add new task and press Enter...">
 
   <script>
-    import { initializeApp } from "firebase/app";
-    import { getAnalytics } from "firebase/analytics";
+
     // 🔧 Replace this with your actual config from Firebase Console
     const firebaseConfig = {
       apiKey: "AIzaSyCyfR3z0JM8LfZHNkMjKom6FbStKIItBqk",
@@ -70,15 +69,12 @@
       storageBucket: "todolist-e1cb5.firebasestorage.app",
       messagingSenderId: "548642182211",
       appId: "1:548642182211:web:93d9170989254a48fcf0f6"
-      measurementId: "G-27N9V369BX"
     };
 
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     const db = firebase.database();
     const listRef = db.ref("tasks");
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
 
     const list = document.getElementById('todo-list');
     const input = document.getElementById('new-task');
