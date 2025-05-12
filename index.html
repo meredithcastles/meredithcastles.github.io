@@ -120,7 +120,7 @@
       li.appendChild(span);
 
       const delBtn = document.createElement('button');
-      delBtn.textContent = '✖';
+      delBtn.textContent = 'x';
       delBtn.onclick = (e) => {
         e.stopPropagation();
         listRef.child(id).remove();
