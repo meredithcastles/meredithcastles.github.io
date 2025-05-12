@@ -140,37 +140,48 @@
     }
 
     // Listen for changes
- listRef.on('child_added', (data) => {
+listRef.on('child_added', (data) => {
   const key = data.key;
   const task = data.val();
 
+  // Check if task already exists in the DOM
+  if (document.querySelector(`li[data-key="${key}"]`)) return;
+
   const li = document.createElement('li');
-  li.dataset.key = key; // 🔑 store Firebase key
+  li.dataset.key = key;
 
   const span = document.createElement('span');
   span.textContent = task.text;
   li.appendChild(span);
 
- 
+  // ✅ DELETE BUTTON — add this!
+  const delBtn = document.createElement('button');
+  delBtn.textContent = 'X';
+  delBtn.onclick = (e) => {
+    e.stopPropagation();
+    listRef.child(key).remove(); // Delete from Firebase
+  };
+  li.appendChild(delBtn);
+
+  // ✅ Toggle done state
+  li.onclick = () => {
+    const isDone = li.classList.contains('done');
+    listRef.child(key).update({ done: !isDone });
+  };
 
   if (task.done) {
     li.classList.add('done');
-  };
-
-  // ✅ Toggle done/undone on click
-  li.onclick = () => {
-    const newDoneState = !li.classList.contains('done');
-    listRef.child(key).update({ done: newDoneState });
-  };
+  }
 
   list.appendChild(li);
 });
 
-    listRef.on('child_changed', (data) => {
-  const key = data.key;
-  const task = data.val();
 
-  const li = document.querySelector(`li[data-key="${key}"]`);
+  listRef.on('child_changed', (data) => {
+    const key = data.key;
+   const task = data.val();
+
+       const li = document.querySelector(`li[data-key="${key}"]`);
   if (li) {
     if (task.done) {
       li.classList.add('done');
