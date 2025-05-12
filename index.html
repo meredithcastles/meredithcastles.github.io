@@ -20,6 +20,7 @@
       background: rgba(30, 30, 30, 0.5); /* Whole list has a semi-transparent dark background */
       padding: 20px;
       border-radius: 10px;
+      overflow: visible;
     }
 
     ul {
@@ -29,16 +30,15 @@
     }
 
     li {
-      padding: 4px 10px;         /* smaller padding = tighter content */
-      margin-bottom: 3px;        /* reduce space between tasks */
-      border-radius: 5px;
-      cursor: pointer;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 4px 10px;
+      margin-bottom: 3px;
+      border-radius: 5px;
+      cursor: pointer;
       transition: background 0.2s ease;
     }
-
 
     li:hover {
       background: rgba(255, 255, 255, 0.1);
@@ -50,20 +50,10 @@
       font-style: italic;
     }
 
-    button {
-      margin-left: 10px;
-      background: transparent;
-      border: none;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-      font-size: 16px;
-    }
-
     li button {
       opacity: 0;
       transition: opacity 0.2s ease;
-      color: red;
+      color: white;
       background: transparent;
       border: none;
       font-size: 16px;
@@ -73,7 +63,6 @@
     li:hover button {
       opacity: 1;
     }
-
 
     input[type="text"] {
       width: 100%;
@@ -134,14 +123,6 @@
       span.textContent = task.text;
       li.appendChild(span);
 
-      const delBtn = document.createElement('button');
-      delBtn.textContent = 'x';
-      delBtn.onclick = (e) => {
-        e.stopPropagation();
-        listRef.child(id).remove();
-      };
-      li.appendChild(delBtn);
-
       li.onclick = () => {
         listRef.child(id).update({ done: !task.done });
       };
@@ -152,8 +133,8 @@
 
     // Listen for changes
  listRef.on('child_added', (data) => {
-  const task = data.val();
   const key = data.key;
+  const task = data.val();
 
   const li = document.createElement('li');
   li.dataset.key = key; // 🔑 store Firebase key
@@ -162,7 +143,17 @@
   span.textContent = task.text;
   li.appendChild(span);
 
-  if (task.done) li.classList.add('done');
+  const delBtn = document.createElement('button');
+  delBtn.textContent = 'x';
+  delBtn.onclick = (e) => {
+    e.stopPropagation();
+    listRef.child(key).remove();
+  };
+  li.appendChild(delBtn);
+
+  if (task.done) {
+    li.classList.add('done');
+  };
 
   // ✅ Toggle done/undone on click
   li.onclick = () => {
