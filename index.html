@@ -16,14 +16,6 @@
       box-sizing: border-box;
     }
 
-    .letter {
-      display: inline-block;
-      border: 3px solid #66ccff; /* Light blue */
-      padding: 2px;
-      margin: 1px;
-      border-radius: 3px;
-    }
-
     #list-container {
       background: rgba(30, 30, 30, 0.5); /* Whole list has a semi-transparent dark background */
       padding: 20px;
@@ -80,7 +72,7 @@
       border-radius: 5px;
       background: rgba(255, 255, 255, 0.1);
       color: white;
-      font-size: 14px;
+      font-size: 16px;
     }
 
     input[type="text"]::placeholder {
@@ -93,13 +85,7 @@
 </head>
 <body>
   <div id="list-container">
-    <h2 id="title">
-      <span class="letter">T</span><span class="letter">a</span><span class="letter">s</span><span class="letter">k</span><span class="letter">s</span>
-      <span class="letter">I</span><span class="letter">'</span><span class="letter">m</span>
-      <span class="letter">W</span><span class="letter">o</span><span class="letter">r</span><span class="letter">k</span><span class="letter">i</span><span class="letter">n</span><span class="letter">g</span>
-      <span class="letter">O</span><span class="letter">n</span>
-      <span class="letter">T</span><span class="letter">o</span><span class="letter">d</span><span class="letter">a</span><span class="letter">y</span><span class="letter">:</span>
-    </h2>
+    <h2>Tasks I'm Working On Today:</h2>
     <ul id="todo-list"></ul>
     <input type="text" id="new-task" placeholder="Add new task...">
   </div>  
