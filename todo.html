@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stream To-Do List</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: sans-serif;
+      background: rgba(30, 30, 30, 0.5); /* semi-transparent dark grey */
+      color: white;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      padding: 8px 12px;
+      margin-bottom: 6px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 5px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.2s ease;
+    }
+
+    li:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    li.done span {
+      text-decoration: line-through;
+      opacity: 0.6;
+    }
+
+    button {
+      margin-left: 10px;
+      background: transparent;
+      border: none;
+      color: red;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 8px 10px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      font-size: 14px;
+    }
+
+    input[type="text"]::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  </style>
+  <script>
+  setInterval(() => {
+    location.href = location.pathname + '?t=' + new Date().getTime();
+  }, 5000); // reload every 5 seconds
+</script>
+
+</head>
+<body>
+  <h2>To-Do List</h2>
+  <ul id="todo-list"></ul>
+  <input type="text" id="new-task" placeholder="Add new task and press Enter...">
+
+  <script>
+    const list = document.getElementById('todo-list');
+    const input = document.getElementById('new-task');
+
+    function saveTasks() {
+      const tasks = [];
+      list.querySelectorAll('li').forEach(li => {
+        tasks.push({
+          text: li.querySelector('span').textContent,
+          done: li.classList.contains('done')
+        });
+      });
+      localStorage.setItem('stream-todo', JSON.stringify(tasks));
+    }
+
+    function loadTasks() {
+      const tasks = JSON.parse(localStorage.getItem('stream-todo')) || [];
+      tasks.forEach(task => addTask(task.text, task.done));
+    }
+
+    function addTask(text, done = false) {
+      const li = document.createElement('li');
+
+      const span = document.createElement('span');
+      span.textContent = text;
+      li.appendChild(span);
+
+      const delBtn = document.createElement('button');
+      delBtn.textContent = '✖';
+      delBtn.onclick = (e) => {
+        e.stopPropagation();
+        li.remove();
+        saveTasks();
+      };
+      li.appendChild(delBtn);
+
+      li.onclick = () => {
+        li.classList.toggle('done');
+        saveTasks();
+      };
+
+      if (done) li.classList.add('done');
+      list.appendChild(li);
+    }
+
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && input.value.trim()) {
+        addTask(input.value.trim());
+        input.value = '';
+        saveTasks();
+      }
+    });
+
+    loadTasks();
+  </script>
+</body>
+</html>
