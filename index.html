@@ -123,6 +123,14 @@
       span.textContent = task.text;
       li.appendChild(span);
 
+      const delBtn = document.createElement('button');
+      delBtn.textContent = 'x';
+      delBtn.onclick = (e) => {
+        e.stopPropagation();
+        listRef.child(id).remove();
+      };
+      li.appendChild(delBtn);
+
       li.onclick = () => {
         listRef.child(id).update({ done: !task.done });
       };
@@ -143,13 +151,7 @@
   span.textContent = task.text;
   li.appendChild(span);
 
-  const delBtn = document.createElement('button');
-  delBtn.textContent = 'x';
-  delBtn.onclick = (e) => {
-    e.stopPropagation();
-    listRef.child(key).remove();
-  };
-  li.appendChild(delBtn);
+ 
 
   if (task.done) {
     li.classList.add('done');
