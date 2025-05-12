@@ -109,20 +109,40 @@
 
     // Listen for changes
  listRef.on('child_added', (data) => {
-      renderTask(data.key, data.val());
-    });
+  const task = data.val();
+  const key = data.key;
+
+  const li = document.createElement('li');
+  li.dataset.key = key; // 🔑 store Firebase key
+
+  const span = document.createElement('span');
+  span.textContent = task.text;
+  li.appendChild(span);
+
+  if (task.done) li.classList.add('done');
+
+  // ✅ Toggle done/undone on click
+  li.onclick = () => {
+    const newDoneState = !li.classList.contains('done');
+    listRef.child(key).update({ done: newDoneState });
+  };
+
+  list.appendChild(li);
+});
 
     listRef.on('child_changed', (data) => {
-      const li = document.getElementById(data.key);
-      if (li) {
-        li.classList.toggle('done', data.val().done);
-      }
-    });
+  const key = data.key;
+  const task = data.val();
 
-    listRef.on('child_removed', (data) => {
-      const li = document.getElementById(data.key);
-      if (li) li.remove();
-    });
+  const li = document.querySelector(`li[data-key="${key}"]`);
+  if (li) {
+    if (task.done) {
+      li.classList.add('done');
+    } else {
+      li.classList.remove('done');
+    }
+  }
+});
 
     // Add new task
 input.addEventListener('keydown', (e) => {
@@ -143,6 +163,7 @@ input.addEventListener('keydown', (e) => {
       });
   }
 });
+
 
   </script>
 </body>
