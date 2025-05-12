@@ -117,7 +117,7 @@
       if (existing) return; // prevent duplicates
 
       const li = document.createElement('li');
-      li.id = id;
+      li.dataset.key = id;
 
       const span = document.createElement('span');
       span.textContent = task.text;
@@ -188,6 +188,14 @@ listRef.on('child_added', (data) => {
     } else {
       li.classList.remove('done');
     }
+  }
+});
+
+    listRef.on('child_removed', (data) => {
+  const key = data.key;
+  const li = document.querySelector(`li[data-key="${key}"]`);
+  if (li) {
+    li.remove();
   }
 });
 
