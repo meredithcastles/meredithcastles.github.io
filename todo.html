@@ -80,61 +80,86 @@
   <ul id="todo-list"></ul>
   <input type="text" id="new-task" placeholder="Input new task...">
 
-  <script>
-    const list = document.getElementById('todo-list');
-    const input = document.getElementById('new-task');
+    <script type="module">
+  // Your Firebase project config (copy from Firebase Console → Project Settings)
+  const firebaseConfig = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_PROJECT.firebaseapp.com",
+    databaseURL: "https://YOUR_PROJECT.firebaseio.com",
+    projectId: "YOUR_PROJECT_ID",
+    storageBucket: "YOUR_PROJECT.appspot.com",
+    messagingSenderId: "YOUR_SENDER_ID",
+    appId: "YOUR_APP_ID"
+  };
 
-    function saveTasks() {
-      const tasks = [];
-      list.querySelectorAll('li').forEach(li => {
-        tasks.push({
-          text: li.querySelector('span').textContent,
-          done: li.classList.contains('done')
-        });
-      });
-      localStorage.setItem('stream-todo', JSON.stringify(tasks));
-    }
+  // Import SDKs
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+  import { getDatabase, ref, push, onValue, remove, update } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
+  import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
 
-    function loadTasks() {
-      const tasks = JSON.parse(localStorage.getItem('stream-todo')) || [];
-      tasks.forEach(task => addTask(task.text, task.done));
-    }
+  // Init Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+  const auth = getAuth(app);
 
-    function addTask(text, done = false) {
-      const li = document.createElement('li');
+  // Auto sign-in (anonymous, fine for your case)
+  signInAnonymously(auth).catch(console.error);
 
-      const span = document.createElement('span');
-      span.textContent = text;
-      li.appendChild(span);
+  const list = document.getElementById('todo-list');
+  const input = document.getElementById('new-task');
+  const tasksRef = ref(db, "tasks");
 
-      const delBtn = document.createElement('button');
-      delBtn.textContent = '✖';
-      delBtn.onclick = (e) => {
-        e.stopPropagation();
-        li.remove();
-        saveTasks();
-      };
-      li.appendChild(delBtn);
+  function addTaskToDOM(taskId, task) {
+    const li = document.createElement('li');
+    if (task.done) li.classList.add('done');
 
-      li.onclick = () => {
-        li.classList.toggle('done');
-        saveTasks();
-      };
+    const span = document.createElement('span');
+    span.textContent = task.text;
+    li.appendChild(span);
 
-      if (done) li.classList.add('done');
-      list.appendChild(li);
-    }
+    const delBtn = document.createElement('button');
+    delBtn.textContent = '✖';
+    delBtn.onclick = (e) => {
+      e.stopPropagation();
+      remove(ref(db, `tasks/${taskId}`));
+    };
+    li.appendChild(delBtn);
 
-    input.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' && input.value.trim()) {
-        addTask(input.value.trim());
-        input.value = '';
-        saveTasks();
-      }
+    li.onclick = () => {
+      const newDone = !li.classList.contains('done');
+      update(ref(db, `tasks/${taskId}`), { done: newDone, updatedAt: Date.now() });
+    };
+
+    li.dataset.id = taskId;
+    list.appendChild(li);
+  }
+
+  // Realtime sync: render tasks
+  onValue(tasksRef, (snapshot) => {
+    list.innerHTML = ""; // clear
+    snapshot.forEach(child => {
+      addTaskToDOM(child.key, child.val());
     });
+  });
 
-    loadTasks();
-  </script>
+  // Add new task
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && input.value.trim()) {
+      const task = {
+        text: input.value.trim(),
+        done: false,
+        createdAt: Date.now(),
+        updatedAt: Date.now(),
+        ownerUid: auth.currentUser ? auth.currentUser.uid : "anon",
+        visibility: "public-read"
+      };
+      push(tasksRef, task);
+      input.value = '';
+    }
+  });
+</script>
+
 </body>
 </html>
+
 
