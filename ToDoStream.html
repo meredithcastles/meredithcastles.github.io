@@ -1,1 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Live To-Do List (Firebase)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: 'Ubuntu', sans-serif;
+      background: transparent;
+      color: white;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+    }
+
+    #list-container {
+      background: rgba(30, 30, 30, 0.5); /* Whole list has a semi-transparent dark background */
+      padding: 20px;
+      border-radius: 10px;
+      overflow: visible;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4px 10px;
+      margin-bottom: 3px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    li:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    li.done span {
+      text-decoration: line-through;
+      opacity: 0.6;
+      font-style: italic;
+    }
+
+    li button {
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      color: white;
+      background: transparent;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    li:hover button {
+      opacity: 1;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 8px 10px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      font-size: 16px;
+    }
+
+    input[type="text"]::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  </style>
+  <!-- Firebase CDN -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
+</head>
+<body>
+  <div id="list-container">
+    <h2>Tasks I'm Working On Today:</h2>
+    <ul id="todo-list"></ul>
+    <input type="text" id="new-task" placeholder="Add new task...">
+  </div>  
+
+  <script>
+
+    // 🔧 Replace this with your actual config from Firebase Console
+    const firebaseConfig = {
+      apiKey: "AIzaSyCyfR3z0JM8LfZHNkMjKom6FbStKIItBqk",
+      authDomain: "todolist-e1cb5.firebaseapp.com",
+      databaseURL: "https://todolist-e1cb5-default-rtdb.firebaseio.com",
+      projectId: "todolist-e1cb5",
+      storageBucket: "todolist-e1cb5.firebasestorage.app",
+      messagingSenderId: "548642182211",
+      appId: "1:548642182211:web:93d9170989254a48fcf0f6"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+    const listRef = db.ref("tasks");
+
+    const list = document.getElementById('todo-list');
+    const input = document.getElementById('new-task');
+
+    // Render task
+    function renderTask(id, task) {
+      const existing = document.getElementById(id);
+      if (existing) return; // prevent duplicates
+
+      const li = document.createElement('li');
+      li.dataset.key = id;
+
+      const span = document.createElement('span');
+      span.textContent = task.text;
+      li.appendChild(span);
+
+      const delBtn = document.createElement('button');
+      delBtn.textContent = 'x';
+      delBtn.onclick = (e) => {
+        e.stopPropagation();
+        listRef.child(id).remove();
+      };
+      li.appendChild(delBtn);
+
+      li.onclick = () => {
+        listRef.child(id).update({ done: !task.done });
+      };
+
+      if (task.done) li.classList.add('done');
+      list.appendChild(li);
+    }
+
+    // Listen for changes
+listRef.on('child_added', (data) => {
+  const key = data.key;
+  const task = data.val();
+
+  // Check if task already exists in the DOM
+  if (document.querySelector(`li[data-key="${key}"]`)) return;
+
+  const li = document.createElement('li');
+  li.dataset.key = key;
+
+  const span = document.createElement('span');
+  span.textContent = task.text;
+  li.appendChild(span);
+
+  // ✅ DELETE BUTTON — add this!
+  const delBtn = document.createElement('button');
+  delBtn.textContent = 'X';
+  delBtn.onclick = (e) => {
+    e.stopPropagation();
+    listRef.child(key).remove(); // Delete from Firebase
+  };
+  li.appendChild(delBtn);
+
+  // ✅ Toggle done state
+  li.onclick = () => {
+    const isDone = li.classList.contains('done');
+    listRef.child(key).update({ done: !isDone });
+  };
+
+  if (task.done) {
+    li.classList.add('done');
+  }
+
+  list.appendChild(li);
+});
+
+
+  listRef.on('child_changed', (data) => {
+    const key = data.key;
+   const task = data.val();
+
+       const li = document.querySelector(`li[data-key="${key}"]`);
+  if (li) {
+    if (task.done) {
+      li.classList.add('done');
+    } else {
+      li.classList.remove('done');
+    }
+  }
+});
+
+    listRef.on('child_removed', (data) => {
+  const key = data.key;
+  const li = document.querySelector(`li[data-key="${key}"]`);
+  if (li) {
+    li.remove();
+  }
+});
+
+    // Add new task
+input.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    const text = input.value.trim();
+    if (text.length === 0) return;
+
+    console.log("Adding task:", text); // ✅ Debug log
+
+    listRef.push({ text, done: false })
+      .then(() => {
+        input.value = '';
+        console.log("Task added successfully");
+      })
+      .catch((error) => {
+        console.error("Failed to add task:", error);
+        alert("Could not add task. Check console for errors.");
+      });
+  }
+});
+
+
+  </script>
+</body>
+</html>
 
